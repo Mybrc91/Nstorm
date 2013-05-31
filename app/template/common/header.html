@@ -13,9 +13,10 @@
     <title><%= C.site_name %></title>
     <link href="<%=C.surl%>/css/blog.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="<%=C.surl%>/images/ico.png" />
+
 </head>
 <body>
-<header class="header" id="topbar">
+<div class="header" id="topbar">
     <div class="wrapper clearfix"> <a class="logo" title="网站首页" href="/"><img src="<%=C.surl%>/images/logo.gif"></a>
         <nav class="nav" id="main_menu">
             <% if('undefined'!==typeof user){ %>
@@ -30,10 +31,10 @@
             <% }%>
         </nav>
     </div>
-</header>
+</div>
 <div class="container" id="container">
     <div class="blogsbg">
-        <nav class="blog-nav">
+        <div class="blog-nav">
             <div class="wrapper clearfix"> <span class="searchbox">
     <form  action="/">
         <input type="search" class="search" name="s" placeholder="search......" x-webkit-speech="" x-webkit-grammar="builtin:translate">
@@ -43,5 +44,5 @@
                     <!--nav-->
                 </ul>
             </div>
-        </nav>
+        </div>
         <div class="wrapper blogbox clearfix">
