@@ -46,6 +46,8 @@ static include :
            style ：function modules
            
 app.js is the entry
+
+the Demo is : http://node.wvovo.com/
       
       
       
