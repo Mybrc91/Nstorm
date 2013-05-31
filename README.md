@@ -1,7 +1,11 @@
 NodejsSNS
 =========
 
-author : @KenZR
+author : @KenZR 
+
+sina weibo: http://weibo.com/cksky 
+
+blog: http://www.vcotime.com/
 
 be good at : php javascript nodejs html css and so on;
 
