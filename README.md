@@ -1,4 +1,4 @@
-NodejsSNS
+Nstorm the Nodejs mvc framework
 =========
 
 author : @KenZR 
