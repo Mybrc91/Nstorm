@@ -13,9 +13,9 @@ exports.init = function(app)
 }
 
 exports.connect = function(callback) {
-    mongoose.connect(C.db);
+    mongoose.connect(C.Mongodb);
 }
-
+ 
 exports.disconnect = function(callback) {
     mongoose.disconnect(callback);
 }

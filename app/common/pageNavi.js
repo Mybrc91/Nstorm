@@ -1,5 +1,5 @@
 /**
-page 当前页,count 总数,perpage 每一页,url 连接
+page 当前页,count 总数,perpage 每一页, rowNum 当前页数 , url 连接
 */
 exports.pageNavi = function(page,count,perpage,url) {
 	var page = (page>0)?page:1;
@@ -35,7 +35,7 @@ exports.pageNavi = function(page,count,perpage,url) {
 		{
 			pageList +="<a href='"+surl+"1'>1</a><i>...</i>";
 			
-			for (i = (rowNum -5); i <= rowNum; i++) {
+			for (i = (rowNum -4); i <= rowNum; i++) {
 				if (i == page) {
 					 pageList += "<a href='"+surl+i+"' class='on'>" + i + "</a>";
 				} else {

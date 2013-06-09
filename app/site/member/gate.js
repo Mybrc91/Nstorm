@@ -1,20 +1,18 @@
 var gate = module.exports = {};
-var memberDB = require(C.model+'/member');
+//var memberDB = require(C.model+'/member');
 var encode = require(C.common+'/encode');
 var email = require('./email');
-var emailDB = require(C.model+'/email');
 
 gate.init = function(req,res,next,a)
 {
     if('function'!==typeof gate[a])next();
-	C.spath = C.site+'/'+C.g+'/tpl/';
     gate[a](req,res,next);
 }
 
 
 gate.login = function(req,res)
 {
-    res.render(C.spath+'login.html');
+    res.render('member/login.html');
 }
 
 
@@ -33,13 +31,14 @@ gate.checkLogin = function(req,res)
             var d = {}; var name = email.split('@');
             d.email = email;
             d.name = name[0];
-            memberDB.findOne({email:d.email},function(data){
+            D('Member').model().findOne({email:d.email},function(err,data){
+
                 if(!data)
                 {
                     d.regip = req.ip;
                     d.logip = req.ip;
 					//d.name += C.now;
-                    memberDB.add(d, function (err, id) {
+                    D('Member').insert(d, function (err, id) {
                         var key = {name:d.name,email:d.email,uid:id};
                         key = JSON.stringify(key);
                         key = encode.e(key);
@@ -52,7 +51,7 @@ gate.checkLogin = function(req,res)
                 {
                     d.logip = req.ip;
                     // console.log(d);
-                    memberDB.update({email: d.email},d, function (err, row) {
+                   D('Member').update({email: d.email},d, function (err, row) {
                         var key = {name:data.name,email:data.email,uid:data.id,status:data.status};
                         key = JSON.stringify(key);
                         key = encode.e(key);
@@ -122,10 +121,10 @@ gate.actionMail = function(req,res,next)
 
        if(user.status)
        {res.redirect('/');next();}
-    memberDB.count(user,function(err,count){
+    D('Member').count(user,function(err,count){
         if(count>0)
         {
-            memberDB.updateStatus({email: user.email},{status:true},function(err, row){
+            D('Member').update({email: user.email},{status:true},function(err, row){
 
                 var key = {name:user.name,email:user.email,uid:user.id,status:true};
                 key = JSON.stringify(key);

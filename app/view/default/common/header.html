@@ -24,8 +24,8 @@
                 <li><img class="avatar" src="http://www.gravatar.com/avatar/<%- user.avatar%>?size=32"> </li>
                 <li><a title="ip:<%- user.ip%>"><%- user.name%></a></li>
                 <li><a href="/member/gate/logout/">退 出</a></li>
-                <li <%if(C.a=='add'){%>class="current-menu-item"<%}%>><a href="/blog/todo/add/">发布话题</a></li>
-                <li <%if(C.a=='my'){%>class="current-menu-item"<%}%>><a href="/blog/todo/my/">我的话题</a></li>
+                <li <%if(C.a=='add'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/add/">发布话题</a></li>
+                <li <%if(C.a=='my'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/my/">我的话题</a></li>
                 <li><%if(user.status){%><span class="btn-success btn">已激活✔</span><% }else{%><a rel='<%-C.now%>' id="validateMail" class="btn ">激活邮箱</a><% }%></li>
             </ul>
             <% }%>
