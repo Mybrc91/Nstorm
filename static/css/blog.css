@@ -152,9 +152,9 @@ footer a { font-size:14px; color:#888; display:inline-block; margin:0 10px; }
 
 /*blog-nav*/
 .blog-nav { padding:5px 0; position:fixed; _position:inherit; width:100%; background:#eee; height:30px; }
-.blog-nav ul li.current-menu-item a, .blog-nav ul li a:hover { color:#fff; background:#0088DB }
+.blog-nav ul li.current-menu-item a, .blog-nav ul li a:hover ,.active{ color:#fff; background:#0088DB }
 .blog-nav ul li { font-size:12px; float:left; margin-right:5px; }
-.blog-nav ul li a { color:#000; background:#eee; padding:5px 12px; display:inline-block; 
+.blog-nav ul li a,.btn { color:#000; background:#eee; padding:5px 12px; display:inline-block; 
 -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
 }
 /*page_nav*/

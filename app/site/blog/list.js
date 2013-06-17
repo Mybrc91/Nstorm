@@ -18,8 +18,11 @@ var list = require('./base');
 	   op.where = where; 
 	   op.page = page; 
 	   op.perPage = perPage;
+
+	 //  var d = {};
+	     //  d.comments ={comment:'abc'};
 	  
-	  
+	  //D('Blog').insert(d,function(e,callback){});
 		  
 		  D('Blog')._list(op,function(err,todos){
 		  

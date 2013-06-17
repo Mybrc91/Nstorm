@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var Comments = new Schema({
+    name    :String
+  , email   :String
+  , comment :String
+  , date    :{type:String,default:C.time()}
+});
+
 var BlogScheme = new Schema({
     title:String
     ,content:String
@@ -12,6 +19,11 @@ var BlogScheme = new Schema({
     ,email:String
     ,author:String
     ,view:{type:Number,default:0}
+    , comments  : [Comments]
+    , meta      : {
+            votes : {type:Number,default:0}
+          , favs  : {type:Number,default:0}
+        }
 });
 
 mongoose.model('Blog', BlogScheme);

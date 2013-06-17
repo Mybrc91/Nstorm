@@ -13,8 +13,8 @@ config.init = function(path)
 	site_desc :'研究nodejs方向',
 	session_secret :'KenzRSecret',
     secret:'KensSecret',
-	
-	Mongodb :'mongodb://ken:666666@127.0.0.1:27017/sns',
+	Mongodb :'mongodb://ken:ck666666@a.okmine.com:27017/todo_dev',
+	//Mongodb :'mongodb://ken:666666@127.0.0.1:27017/sns',
 	staticUrl :'s0.node.cc',
 	surl :'',//css images js url
 	//purl :'http://'+staticUrl,//data images url

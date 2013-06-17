@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-//mongoose.set('debug', true);
+mongoose.set('debug', true);
 
 function D(obj) {
 	var o = new Object;
