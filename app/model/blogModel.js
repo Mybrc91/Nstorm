@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Comments = new Schema({
-    name    :String
+    _id     :Object
+  , name    :String
   , email   :String
   , comment :String
   , date    :{type:String,default:C.time()}
